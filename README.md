@@ -14,5 +14,5 @@ The aim of similarity scoring is to create a function that takes a pair of objec
 Cosine similarity is a measurement that quantifies the similarity between two or more vectors. It’s the cosine of the angle between vectors, which are typically non-zero and within an inner product space. 
 Cosine similarity is described mathematically as the division between the dot product of vectors and the product of the Euclidean norms or magnitude of each vector.
 
-<img width=“964” alt=“java 8 and prio java 8  array review example” src=“https://github.com/tholeduc1506/Movie_recommendationSystem/blob/main/static/%cosine_similarity.png>
+  ![image](https://user-images.githubusercontent.com/36665975/70401457-a7530680-1a55-11ea-9158-97d4e8515ca4.png)
 
