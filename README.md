@@ -14,4 +14,4 @@ The aim of similarity scoring is to create a function that takes a pair of objec
 Cosine similarity is a measurement that quantifies the similarity between two or more vectors. It’s the cosine of the angle between vectors, which are typically non-zero and within an inner product space. 
 Cosine similarity is described mathematically as the division between the dot product of vectors and the product of the Euclidean norms or magnitude of each vector.
 
-![image](https://github.com/tholeduc1506/Movie_recommendationSystem/tree/main/static/cosine_similarity.png?raw=true)
+![image](https://github.com/tholeduc1506/Movie_recommendationSystem/blob/static/cosine_similarity.png?raw=true)
