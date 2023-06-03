@@ -15,23 +15,23 @@ def home():
 
 
 
-@app.route("/recommend")
-def recommend():
+@app.route("/recommendation")
+def recommendation():
     movie = request.args.get('movie')
     r = rcmd(movie)
     movie = movie.upper()
     if type(r)==type('string'):
-        return render_template('recommend.html',movie=movie,r=r,t='s')
+        return render_template('recommendation.html',movie=movie,r=r,t='s')
     else:
-        return render_template('recommend.html',movie=movie,r=r,t='l')
+        return render_template('recommendation.html',movie=movie,r=r,t='l')
 
 # Get movies' title from final_data.csv:
 def get_suggestions():
     data = pd.read_csv('final_data.csv')
-    return list(data['title'].str.capitalize())
-
+    return list(data['title'])
+    
 def create_sim_matrix():
-    data = pd.read_csv('final_data2.csv')
+    data = pd.read_csv('final_data.csv')
     # create a count matrix:
     cv = CountVectorizer()
     count_matrix = cv.fit_transform(data['tag'])
