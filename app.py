@@ -10,26 +10,21 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    suggestions = get_suggestions()
-    return render_template('home.html',suggestions=suggestions)
+    return render_template('home.html')
 
 
 
 @app.route("/recommendation")
 def recommendation():
     movie = request.args.get('movie')
-    r = rcmd(movie)
+    re = rcmd(movie)
     movie = movie.upper()
-    if type(r)==type('string'):
-        return render_template('recommendation.html',movie=movie,r=r,t='s')
+    if type(re)==type('string'):
+        return render_template('recommendation.html',movie=movie,re=re,t='s')
     else:
-        return render_template('recommendation.html',movie=movie,r=r,t='l')
+        return render_template('recommendation.html',movie=movie,re=re,t='l')
 
-# Get movies' title from final_data.csv:
-def get_suggestions():
-    data = pd.read_csv('final_data.csv')
-    return list(data['title'])
-    
+
 def create_sim_matrix():
     data = pd.read_csv('final_data.csv')
     # create a count matrix:
@@ -39,8 +34,8 @@ def create_sim_matrix():
     sim = cosine_similarity(count_matrix)
     return data,sim
 
-def rcmd(m):
-    m = m.lower()
+def rcmd(mo):
+    mo = mo.lower()
     # check if data and sim are already assigned:
     try:
         data.head()
@@ -48,11 +43,11 @@ def rcmd(m):
     except:
         data, sim = create_sim_matrix()
     # check if the movie is in database:
-    if m not in data['title'].unique():
+    if mo not in data['title'].unique():
         return('This movie is not in our database. Please try with another movie')
     else:
         # get the index of the movie in the dataframe:
-        i = data.loc[data['title']==m].index[0]
+        i = data.loc[data['title']==mo].index[0]
 
         # fetch the row containing similarity scores of the movie
         # from similarity matrix and enumerate it:
