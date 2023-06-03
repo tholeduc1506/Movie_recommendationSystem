@@ -16,3 +16,11 @@ Cosine similarity is described mathematically as the division between the dot pr
 
   ![image](https://github.com/tholeduc1506/Movie_recommendationSystem/blob/f08f9887a77504673f5f8969068209adb8a73a8c/static/cosine_similarity.png)
 
+# Movie Recommendation System:
+This is a movie recommender system built with Python. I've used IMDB 5000 Movie Dataset to built this.
+[TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata?select=tmdb_5000_movies.csv)
+
+## Data Preprocessing:
+I created a 'tag' column which includes information regarding Overview, genres, keywords, cast and crew of each movie. This 'tag' column plays as 'content-based vector' of the movies.
+
+  ![image](https://github.com/tholeduc1506/Movie_recommendationSystem/blob/f08f9887a77504673f5f8969068209adb8a73a8c/static/datapreprocessing.png)
