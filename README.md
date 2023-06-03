@@ -35,3 +35,5 @@ For Cinnamon checker: I tried to build some functions to output movie list that 
 
 
 I am a 5-year civil engineer and have no experience in frontend UI, I am just able to build a simple web app like this.
+
+Deployed app: https://tldmovierecommendationsystem.herokuapp.com/
