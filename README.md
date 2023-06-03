@@ -23,9 +23,15 @@ This is a movie recommender system built with Python. I've used IMDB 5000 Movie 
 ## Data Preprocessing:
 I created a 'tag' column which includes information regarding Overview, genres, keywords, cast and crew of each movie. This 'tag' column plays as 'content-based vector' of the movies. After data preprocessing, the final_data table includes movie_id, title and tag column.
 
+
   ![image](https://github.com/tholeduc1506/Movie_recommendationSystem/blob/c6242f1762511705e23b68f0a239efb474aec838/static/datapreprocessing.PNG)
+
 
 ## For app.py, home.html:
 For Cinnamon checker: I tried to build some functions to output movie list that callable in 'var films' in 'home.html', but it does not work. Then, I had to make a long list of movies in 'var films'. Please give me advice to solve this problem.
-  ![image](https://github.com/tholeduc1506/Movie_recommendationSystem/blob/c6242f1762511705e23b68f0a239efb474aec838/static/datapreprocessing.PNG)
+
+
+  ![image](https://github.com/tholeduc1506/Movie_recommendationSystem/blob/31b97113c16fa297d735787a368cc98875ef5fff/static/MovieList.PNG)
+
+
 I am a 5-year civil engineer and have no experience in frontend UI, I am just able to build a simple web app like this.
